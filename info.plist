@@ -6,7 +6,7 @@
 	<string>net.hardison.dylan.repo</string>
 	<key>connections</key>
 	<dict>
-		<key>50B0CD10-4D52-4898-9C05-DD3A34A829C3</key>
+		<key>21CA14F2-E0C1-4CF6-B2BC-48AEEF72357B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -36,21 +36,21 @@
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
+				<true/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>repo</string>
 				<key>queuedelaycustom</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<false/>
+				<true/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -62,7 +62,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>test.sh</string>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -75,7 +75,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>50B0CD10-4D52-4898-9C05-DD3A34A829C3</string>
+			<string>21CA14F2-E0C1-4CF6-B2BC-48AEEF72357B</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -103,21 +103,19 @@
 	<string>Set GITHUB_CHECKOUT_DIR to the place where you keep git checkouts.</string>
 	<key>uidata</key>
 	<dict>
-		<key>50B0CD10-4D52-4898-9C05-DD3A34A829C3</key>
+		<key>21CA14F2-E0C1-4CF6-B2BC-48AEEF72357B</key>
 		<dict>
-			<key>note</key>
-			<string>Alfred 3 now supports JSON as the Script Filter output. This is the recommended output.</string>
 			<key>xpos</key>
-			<integer>70</integer>
+			<integer>55</integer>
 			<key>ypos</key>
-			<integer>75</integer>
+			<integer>85</integer>
 		</dict>
 		<key>CF6C084F-588E-4525-A68F-C10057CAC689</key>
 		<dict>
 			<key>xpos</key>
-			<integer>310</integer>
+			<integer>315</integer>
 			<key>ypos</key>
-			<integer>75</integer>
+			<integer>85</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

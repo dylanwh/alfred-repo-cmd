@@ -20,4 +20,5 @@ $(STAMP).json: Makefile
 	@curl -sL https://github.com/$@ -o $@
 
 clean:
-	@rm -vf *.json *.png
+	@find . -not -name 21CA14F2-E0C1-4CF6-B2BC-48AEEF72357B.png -name '*.png' -print0 | xargs -0 rm
+	@rm *.json
