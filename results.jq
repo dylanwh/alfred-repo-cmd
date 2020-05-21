@@ -5,7 +5,7 @@
             uid: .,
             arg: .,
             autocomplete: .,
-            match: ( [ [.], split("/") | join(" ") ] | join(" ") ),
+            match: ( [ [.], split("\\W"; "") | join(" ") ] | join(" ") ),
             icon: { path: (split("/")[0] | . + ".png") },
         }
     ]
