@@ -1,2 +1,0 @@
-#!/usr/bin/perl
-print "[ ", join(", ", map { qq{"$_"} } @ARGV), " ]\n";

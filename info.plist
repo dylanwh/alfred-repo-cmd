@@ -10,7 +10,33 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>CF6C084F-588E-4525-A68F-C10057CAC689</string>
+				<string>24BCF444-CF20-4649-9F62-86CF328F4CB7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9EF0D16F-E9B9-48CD-BE8B-BF27A113693C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>21CA14F2-E0C1-4CF6-B2BC-48AEEF72357B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9FC45810-FC88-4986-92E1-6132D78F8AF9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>045E2F1A-A2D0-4E47-981E-0CABC1E5A136</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -54,17 +80,18 @@
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string>finding repos</string>
 				<key>script</key>
-				<string>make</string>
+				<string>PATH="$PWD:$HOME/.cargo/bin:/usr/local/bin:/opt/local/bin:$PATH"
+repo</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>View on GitHub</string>
 				<key>title</key>
 				<string>repo</string>
 				<key>type</key>
@@ -82,40 +109,161 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>5</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>G</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>9EF0D16F-E9B9-48CD-BE8B-BF27A113693C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://github.com/{query}</string>
+				<string></string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>CF6C084F-588E-4525-A68F-C10057CAC689</string>
+			<string>24BCF444-CF20-4649-9F62-86CF328F4CB7</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Visual Studio Code"
+    open q
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>045E2F1A-A2D0-4E47-981E-0CABC1E5A136</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>code</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>finding repos</string>
+				<key>script</key>
+				<string>PATH="$PWD:$HOME/.cargo/bin:/usr/local/bin:/opt/local/bin:$PATH"
+repo code</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>code</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9FC45810-FC88-4986-92E1-6132D78F8AF9</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string>Set GITHUB_CHECKOUT_DIR to the place where you keep git checkouts.</string>
 	<key>uidata</key>
 	<dict>
+		<key>045E2F1A-A2D0-4E47-981E-0CABC1E5A136</key>
+		<dict>
+			<key>xpos</key>
+			<integer>225</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
 		<key>21CA14F2-E0C1-4CF6-B2BC-48AEEF72357B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>235</integer>
 			<key>ypos</key>
 			<integer>85</integer>
 		</dict>
-		<key>CF6C084F-588E-4525-A68F-C10057CAC689</key>
+		<key>24BCF444-CF20-4649-9F62-86CF328F4CB7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>450</integer>
 			<key>ypos</key>
 			<integer>85</integer>
+		</dict>
+		<key>9EF0D16F-E9B9-48CD-BE8B-BF27A113693C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>85</integer>
+		</dict>
+		<key>9FC45810-FC88-4986-92E1-6132D78F8AF9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>30</integer>
+			<key>ypos</key>
+			<integer>220</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

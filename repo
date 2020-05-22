@@ -1,0 +1,17 @@
+#!/bin/sh
+tempfile="$(mktemp)"
+GITHUB_CHECKOUT_DIR="${GITHUB_CHECKOUT_DIR:-$HOME/Git}"
+GITHUB_CHECKOUT_DIR="${GITHUB_CHECKOUT_DIR//\~/$HOME}"
+export GITHUB_CHECKOUT_DIR
+format="${1:-default}"
+fd \
+  --exec-batch \
+    rg --no-heading -INor '$1' \
+    'url\s+=\s+(?:(?:git@)?github.com:|(?:https|git)://github.com/)([^.]+)' \
+    '{}/config' \
+  ';' \
+  -Htd '^\.git$' \
+  -d${GITHUB_CHECKOUT_DEPTH:-3} \
+  $GITHUB_CHECKOUT_DIR | sort -u | jq --raw-input --slurp -f $format.jq | tee $tempfile | jq -r '.items[].icon.path' | sort -u | xargs make -s -j8
+cat $tempfile
+rm $tempfile
